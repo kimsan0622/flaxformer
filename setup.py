@@ -55,6 +55,9 @@ setup(
     author_email="noreply@google.com",
     url="https://github.com/google/flaxformer",
     packages=find_packages(),
+    package_data={
+        '': ['**/*.gin'],  # not all subdirectories may have __init__.py.
+    },
     zip_safe=False,
     install_requires=install_requires,
     extras_require={
